@@ -1,0 +1,28 @@
+﻿@*@model rough.Models.Bus
+*@
+@model IEnumerable<rough.Models.Employee>   // ienumerable foreach loop
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h2>Display All Employees</h2>
+<div>
+    <a asp-action="login2">Back to List</a>
+</div>
+@{
+    var o = Model;
+}
+@foreach(var m in o)
+{
+    <span>@m.Id </span>
+        <span>@m.EmployeeId</span>
+        <span>@m.Password</span>
+        <span>@m.EmpName</span>
+        <span>@m.Age</span>
+        <span>@m.Salary</span>
+        <span>@m.Gender</span>
+       
+
+        <br />
+}

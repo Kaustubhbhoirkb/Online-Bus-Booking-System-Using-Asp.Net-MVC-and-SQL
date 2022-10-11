@@ -1,0 +1,40 @@
+﻿@model List<Cancelticket>
+
+<div class="container">
+    <h2>Table</h2>
+    <div>
+        <a asp-action="Employeeindex1" class="btn btn-primary">Back</a>
+    </div>
+    <div class="table-responsive table-bordered table-hover table-striped">
+        <table class="table" id="tablepagination">
+            <thead>
+                <tr>
+                    <th>BusID</th>
+                    <th>Name</th>
+                    <th>Email</th>                  
+                    <th>Mobile_No</th>
+                   
+                </tr>
+            </thead>
+
+            @foreach (var student in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@student.Busid</td>
+                        <td>@student.Name</td>
+                        <td>@student.Email</td>                      
+                        <td>@student.Mobile_No</td>
+                       
+                        @*<td>
+                            <input class="btn btn-sm btn-success" type="button" value="Refund" onclick="location.href='@Url.Action("Refund", "Bus")'" />
+                        </td>*@
+                       
+                    </tr>
+
+                </tbody>
+            }
+        </table>
+    </div>
+</div>
+

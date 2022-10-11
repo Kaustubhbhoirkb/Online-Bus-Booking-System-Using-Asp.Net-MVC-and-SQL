@@ -1,0 +1,35 @@
+﻿
+
+<h1>Customer Data</h1>
+    <table class="table" id="tablepagination">
+    <thead>
+      <tr>
+       <th>Name</th>
+        <th>Admin_Id</th>
+        <th>Password</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Gender</th>
+        <th>Mobile_No</th>
+      </tr>
+    </thead>
+    @foreach(var student in Model)
+    { 
+<tbody>
+      <tr>
+        <td>@student.Name</td>
+        <td>@student.Admin_Id</td>  
+        <td>@student.Password</td>  
+        <td>@student.Age</td>  
+        <td>@student.City</td>  
+        <td>@student.Gender</td>  
+        <td>@student.Mobile_No</td>  
+      </tr>
+</tbody>
+}
+  </table>
+
+
+<div>
+    <a asp-action="Employeeindex" class="btn btn-primary">Back</a>
+</div>

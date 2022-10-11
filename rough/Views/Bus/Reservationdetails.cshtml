@@ -1,0 +1,49 @@
+﻿@model List<Resmodel>
+
+ <div class="container">
+  <h2>Table</h2>
+  <div class="table-responsive table-bordered table-hover table-striped">          
+  <table class="table" id="tablepagination">
+      <thead>   
+          <tr>
+        <th>Ticket No.</th>
+        <th>BusID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Mobile_No</th>
+        <th>Mode_Of_Payment</th>
+        <th>Amount_Received</th>
+
+
+    </tr>
+    </thead>
+
+    @foreach(var student in Model)
+    {
+        <tbody>
+    <tr>
+        <td>@student.TicketId</td>
+        <td>@student.BusID</td>
+        <td>@student.Name</td>
+        <td>@student.Email</td>  
+        <td>@student.Age</td>  
+        <td>@student.City</td>  
+        <td>@student.Mobile_No</td>
+        <td>@student.ModeOP</td>
+        <td>@student.Amount</td>
+                        <td>
+                            <input class="btn btn-sm btn-success" type="button" value="Refund" onclick="location.href='@Url.Action("Refund", "Bus")'" />
+                        </td>
+       </tr>
+               
+    </tbody>
+    }
+</table>
+</div>
+</div>
+
+<div>
+    <a asp-action="Employeeindex1" class="btn btn-primary">Back</a>
+</div>

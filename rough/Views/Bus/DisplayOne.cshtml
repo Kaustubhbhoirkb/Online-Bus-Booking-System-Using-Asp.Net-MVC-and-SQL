@@ -1,0 +1,21 @@
+﻿<h1>Display One Bus Details</h1>
+<div>
+    <a asp-action="Employeeindex1" class="btn btn-primary">Back to List</a>
+</div>
+
+<form method="post" asp-controller="Bus" asp-action="DisplayOne">
+
+
+    <div class="d-flex flex-row align-items-center mb-4">
+      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+      <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="Id">Enter Bus ID</label>
+        <input name="Id"  type="text" id="form3Example3c" class="form-control" required/><br />
+
+        <button type="submit" class="btn btn-primary btn-sm">Submit</button> 
+      </div>
+    </div>
+
+</form>
+
+@ViewBag.Work

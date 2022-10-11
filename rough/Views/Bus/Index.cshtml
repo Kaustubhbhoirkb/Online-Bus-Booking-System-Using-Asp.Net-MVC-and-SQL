@@ -1,0 +1,804 @@
+﻿@*<h1>Bus</h1>
+
+@*<a asp-controller="Bus" asp-action="Create">ADD BUSES</a>
+<br />
+<a asp-controller="Bus" asp-action="DisplayOne">DISPLAY ONE BUS</a>
+<br />
+<a asp-controller="Bus" asp-action="Display">DISPLAY ALL BUSES</a>
+<br />
+<a asp-controller="Bus" asp-action="Update">UPDATE BUSES</a>
+<br />
+<a asp-controller="Bus" asp-action="Delete">DELETE BUSES</a>
+<br />
+
+
+<br/>
+<br/>
+
+<a asp-controller="Bus" asp-action="Profile" class="btn btn-primary">Customer Registration</a>
+<br/>
+<br/>
+<a asp-controller="Bus" asp-action="login2" class="btn btn-primary">Customer Login</a>
+<br/>
+<br/>*@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FASTWAY</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizLand - v3.9.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+ <style>
+     pre{
+         font-family:poppins;
+     }
+
+
+ </style>
+  
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        @*<i class="bi bi-envelope d-flex align-items-center"><a href="mailto:dipesh.tandel@nelito.com">Click here to send mail</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 1234567890</span></i>*@
+        <marquee style="width:100%;">Founded in the year 2020, FASTWAY is a well-known online platform dedicated to booking bus tickets around the country. The store is part of the leading online travel agency. </marquee>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+ @* <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">BizLand<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->*@
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center container">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to <span>FASTWAY</span></h1>
+      @*<h2>We are team of talented ENGINEERS creating Web-apps With Asp.net MVC</h2>*@
+      <div class="d-flex">
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main" class="container">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">On Time Guarantee</a></h4>
+@*              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+*@            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Deep Cleaned Buses</a></h4>
+@*              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+*@            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Premium Lounges</a></h4>
+@*              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+*@            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Book Ticket From Any Where</a></h4>
+@*              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+*@            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Featured Services Section -->
+
+
+
+
+    <section id="featured-services1" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <img src="~/photos/cleanliness.png" />
+              <h4 class="title"><a href="">Cleanliness</a></h4>
+@*              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+*@            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <img src="~/photos/timelydeparture.png" />
+              <h4 class="title"><a href="">Buses On Time</a></h4>
+@*              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+*@            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <img src="~/photos/busage.png" />
+              <h4 class="title"><a href="">Bus Age Less Than 3 Years</a></h4>
+@*              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+*@            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <img src="~/photos/experiencedpilot.png" />
+              <h4 class="title"><a href="">Experienced Drivers</a></h4>
+@*              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+*@            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <h3>Find Out More <span>About Us</span></h3>
+          <p>Fast-Way is an emerging brand in the intercity bus ticket booking web application that aims to provide an affordable and dignified travel experience.
+                          India's fastest growing application, which aspires to provide safe, reliable, and affordable
+                                                     travel to its users across India.</p>
+        </div>
+
+        <div class="row">
+          
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <img src="~/photos/image.png" />
+          </div>
+          <div class="col-lg-6"data-aos="fade-right" data-aos-delay="100" style="padding-top:6%;" >
+              <p> <h6>Private Cabins</h6>
+FASTWAY provides safe and secure cabins for all travellers . The private cabins can be used
+for single and double occupancy .</p>
+          </div>
+          </div>
+          <hr />
+          <div class="row">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100 " >
+              <img src="~/photos/image (1).png" class="img-fluid" alt="" />
+
+          </div>
+           <div class="col-lg-6"data-aos="fade-right" data-aos-delay="100" style="padding-top:6%;" >
+               <p><h6>Regular Sanitization</h6> Of Stringent cleaning & sanitization protocol is implemented. All buses are fresh & safe before each trip!</p>
+           </div>
+          
+          </div>
+          <hr />
+          <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <img src="~/photos/image (2).png" class="img-fluid" alt="" />
+          </div>  
+          <div class="col-lg-6"data-aos="fade-right" data-aos-delay="100" style="padding-top:6%;" >
+              <p> <h6>Safe Boarding Lounges</h6>
+Travellers can wait in safe & private boarding lounges. Every lounge is clean and completely disinfected with ample seating space.</p>
+          </div>
+          </div>
+        
+        </div>
+    </section><!-- End About Section -->
+
+   
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12400" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="215" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Buses</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+
+           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <a href="https://msrtc.maharashtra.gov.in/" target="_blank"> <img src="~/photos/Screenshot 2022-09-19 145407.png" class="img-fluid" alt="" style="max-width:153%" /></a>
+           </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                            <a href="https://www.apsrtconline.in/oprs-web/" target="_blank">  <img src="~/photos/Screenshot 2022-09-19 145304.png" class="img-fluid" alt="" style="max-width:153%" /></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                            <a href="https://www.hrtchp.com/hrtc_info/" target="_blank">  <img src="~/photos/Screenshot 2022-09-19 145506.png" class="img-fluid" alt="" style="max-width:153%" /></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+           <a href="https://www.keralartc.com/main.html/" target="_blank"> <img src="~/photos/Screenshot 2022-09-19 145352.png" class="img-fluid" alt=""  style="max-width:153%"   /></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                            <a href="https://www.tsrtconline.in/oprs-web/" target="_blank">  <img src="~/photos/Screenshot 2022-09-19 145326.png" class="img-fluid" alt="" style="max-width:153%" /></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                            <a href="https://gsrtc.in/site/" target="_blank"> <img src="~/photos/Screenshot 2022-09-19 145428.png" class="img-fluid" alt="" style="max-width:153%" /></a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <h3>Check our <span>Services</span></h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+                <img src="~/photos/services1.png" width="110px" height="auto"/>
+             <h4><a href="">UNMATCHED BENEFITS</a></h4>
+              <p>We take care of your travel beyond ticketing by providing you with innovative and unique benefits.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+                <img src="~/photos/services2.png" width="110px" height="97px" >
+              <h4><a href="">SUPERIOR CUSTOMER SERVICE</a></h4>
+              <p>We put our experience and relationships to good use and are available to solve your travel issues.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+                <img src="~/photos/services3.png" width="110px" height="auto" >
+              <h4><a href="">LOWEST PRICES</a></h4>
+              <p>We always give you the lowest price with the best partner offers.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Driver was very punctual and arrived an hour before journey. Owner followed up thoroughly during beginning and end of journey. A very good experience.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Its really fantastic bus booking and journey experience. I have given best ratings on below categories. 1. Punctuality 2. Journey and bus ambience 3. Response and promptness 4. Politeness.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Overall the journey was good. Driver and co driver was generous. Garage charges and KMS charged for it has to be mentioned clearly in terms and conditions. This extra cost we didn't actually estimated as we are not aware about it. Please be more transparent to customers.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  The journey was awesome...we are enjoyed alot....bus was neat and clean good looking....good seats...
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+               
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I have booked a bus to go on a family trip to ananthagiri from hyderabad. The driver was well familiar with the route and we had no problems in reaching there and coming back. I even had to change the travel date and the red bus team and logistics did it with ease. Very happy with the logistics and the driver.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <h3>Our <span>Team</span></h3>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="~/photos/admin.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dipesh Tandel</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img  src="~/photos/admin.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Swaroop Naik</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img  src="~/photos/admin.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Prathamesh Patil</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img  src="~/photos/admin.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Kaustubh Bhoir</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+         
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img  src="~/photos/admin.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Prashant Banger</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img  src="~/photos/admin.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Suyash Vartak</h4>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+   
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Empire Tower, Airoli, Navi-Mumbai 535022</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p><a href="mailto:officialfastway1@gmail.com">Click here to send mail. </a></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+91 7745004433</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          @*<div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>*@
+          <div class="col-md-12">
+          <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=empire tower airoli&amp;t=h&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              <a href="https://mcpenation.com/">Minecraft Website</a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div>
+          </div>
+          @*<div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>*@
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    @*<div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>*@
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>FASTWAY<span>.</span></h3>
+            <p>
+              1012 , airoli <br>
+              Navi Mumbai, 400001<br>
+              Maharashtra  India  <br><br>
+              <strong>Phone:</strong> +91 7745004433<br>
+              <strong>Email:</strong> officialfastway1@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#featured-services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+@*            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+*@            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FASTWAY</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://nelito.com/">NELITO SYSTEM PVT. LTD.</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+﻿@model rough.Models.UserDataModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .vh-100 {
+    height: 193vh!important;
+}
+</style>
+
+<html>
+    <body>
+
+
+
+
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">User Registration</p>
+
+                <form asp-controller="Bus" asp-action="GetDetails" method="post">
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">Your Name</label>
+                      <input name="txtName" type="text" id="form3Example1c" class="form-control" required />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example3c">Your User Name</label>
+                      <input name="txtAdmin_Id"  type="text" id="form3Example3c" class="form-control" required />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example4c">Password</label>
+                      <input name="txtPassword" type="password" id="form3Example4c" class="form-control" required />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example3c">Your Age</label>
+                      <input name="txtAge"  type="text" id="form3Example3c" class="form-control" required />
+                    </div>
+                  </div>
+
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example3c">Your City</label>
+                      <input name="txtCity"  type="text" id="form3Example3c" class="form-control" required />
+                    </div>
+                  </div>
+
+                   <label class="form-label" for="form3Example3c">Please Select Gender</label><br />
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="femaleGender">Female</label>
+                    <input class="form-check-input"   type="radio" name="txtGender" id="myRadio2"
+                      value="Female" checked required />
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="maleGender">Male</label>
+                    <input class="form-check-input" type="radio" name="txtGender" id="myRadio1"
+                      value="Male" required />
+                  </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <label class="form-label" for="form3Example3c">Your Email Id:</label>
+                                                <input name="Email" type="text" id="form3Example3c" class="form-control" required />
+                                            </div>
+                                        </div>
+
+
+
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example3c">Your Mobile No.</label>
+                      <input name="txtMobile_No" type="number" maxlength="10" id="form3Example3c" class="form-control" required />
+                    </div>
+                  </div>
+
+                                     
+
+                 
+
+                  
+
+                  <div class="form-group">
+                <label asp-for="Security_question" class="control-label">Security Question:</label>
+
+                <select name="security" id="ques" style="width: 100%; height: 35px; border-radius: 4px; border-color: #ced4da;">
+                    <option value="">Please Select a Security Question.</option>
+                    <option value="In what city were you born?">In what city were you born?</option>
+                    <option value="What is your mothers maiden name?">What is your mothers maiden name?</option>
+                    <option value="What was your favorite food as a child?">What was your favorite food as a child?</option>
+                    <option value="What high school did you attend?">What high school did you attend?</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Answer" class="control-label">Answer:</label>
+                <input asp-for="Answer" class="form-control" />
+                <span asp-validation-for="Answer" class="text-danger"></span>
+            </div>
+
+
+
+
+                 
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" required />
+                    <label class="form-check-label" for="form2Example3">
+                      I agree all statements in <a href="https://drive.google.com/file/d/12FaKfaLf1o0W76z18e-NjipOu-9238vS/view?usp=sharing">Terms of service</a>
+                    </label>
+                  </div>
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <input type="submit" id="Submit1" value="submit" class="btn btn-primary btn-lg" required/>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+               
+                  <img src="~/photos/registration.jpg"
+                  class="img-fluid" alt="Sample image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div>
+    <a asp-action="login2" class="btn btn-primary">Back </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+
+@ViewBag.Result
+
+</body>
+
+
+</html>

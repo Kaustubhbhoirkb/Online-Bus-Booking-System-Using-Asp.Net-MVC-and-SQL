@@ -1,0 +1,28 @@
+﻿
+<h1>Delete Employee</h1>
+<div>
+    <a asp-action="Employeeindex" class="btn btn-primary">Back to List</a>
+</div>
+<script>
+function myFunction() {
+  alert("Record Deleted");
+}
+</script>
+
+<form method="post" asp-controller="Bus" asp-action="Delete1">
+
+  
+     <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="Id">Enter EMployee ID</label>
+                      <input name="Id"  type="text" id="form3Example3c" class="form-control" required />
+                      <br />
+                      <button type="submit" class="btn btn-outline-danger btn-lg">Submit</button> 
+                    </div>
+    </div>
+
+</form>
+@ViewBag.Work
+
+

@@ -1,0 +1,73 @@
+﻿@model rough.Models.Seats1   // label mai asp-for attribute
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Back</a>
+</div>
+<h2><b>Cancel Ticket</b></h2>
+<div class="container-fluid">
+    <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            
+            <img src="~/photos/cancelticket.png" />
+
+        </div>
+        <div class="col-md-6" style="padding-top:10%;">
+            <form class="form-horizontal" asp-action="Canceltickets">
+                <div class="form-group">
+                        <label class="control-label"><b>Bus ID</b></label>
+                    <input asp-for="Busid"  class="form-control"type="text" required/>
+ @*@model rough.Models.Seats1   models mai se seat1 ki busid property ke liye input element generate
+    karata hai     tag helper html rendering    to generate input element for a property on seats1 model*@
+                </div>
+                <div class="form-group">
+                        <label class="control-label"><b>Seat No:</b></label>
+                    <input asp-for="Seats" class="form-control" type="text" required/>
+                </div>
+                    <div class="form-group">
+                        <label class="control-label"><b>Name:</b></label>
+                        <input asp-for="Name" class="form-control" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><b>Email :</b></label>
+                        <input asp-for="Email" class="form-control" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><b>Mobile No:</b></label>
+                        <input asp-for="Mobile_No" class="form-control" type="text" required />
+                    </div><br />
+                <div class="form-group">
+                   <input class="btn btn-outline-primary  btn-sm" type="submit" value="Cancel" />
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    </div>
+</div>
+<br/>
+<br/>
+
+
+</br>
+</br>
+
+@*<div>
+    <a asp-action="Send" class="btn btn-primary">Inquiry</a>
+</div>
+</br>
+</br>
+<div>
+    <a asp-action="Displayforinquiry" class="btn btn-primary">Inquiry Mails & Numbers</a>
+</div>*@
+
+@{
+    if (TempData["msg"]!=null)
+    {
+    <script>
+                alert('@TempData["msg"]')
+    </script>
+
+    }
+   
+}

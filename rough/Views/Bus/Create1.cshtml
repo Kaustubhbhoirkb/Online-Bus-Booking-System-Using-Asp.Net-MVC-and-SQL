@@ -1,0 +1,67 @@
+﻿@model rough.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>ADD EMPLOYEE</h1>
+
+<div>
+    <a asp-action="Employeeindex" class="btn btn-primary">Back</a>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"><b>Id</b></label>
+                <input asp-for="Id" class="form-control" required />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"><b>Employee Id</b></label>
+                <input asp-for="EmployeeId" class="form-control" required />
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"><b>Employee Password</b></label>
+                <input asp-for="Password" class="form-control" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpName" class="control-label"><b>Employee Name</b></label>
+                <input asp-for="EmpName" class="form-control" required />
+                <span asp-validation-for="EmpName" class="text-danger"></span>
+            </div>
+            </div>
+            <div class=" col-md-6">
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"><b>Employee Age</b></label>
+                <input asp-for="Age" class="form-control" required/>
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+                   
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"><b>Employee Salary</b></label>
+                <input asp-for="Salary" class="form-control" required />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"><b>Employee Gender</b></label>
+                <input asp-for="Gender" class="form-control" required />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>         
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-outline-success btn-sm btn-block" style="margin-top: 23px; width: 100%;  height: 38px;" />
+            </div>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+<h3>@ViewBag.a</h3>
+
+

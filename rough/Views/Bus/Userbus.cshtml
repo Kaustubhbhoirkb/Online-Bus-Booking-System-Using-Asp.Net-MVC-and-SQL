@@ -1,0 +1,61 @@
+﻿@*@model rough.Models.Bus
+*@
+@model IEnumerable<rough.Models.Bus>   // ienumerable foreach loop
+
+
+
+<h2>Display All Buses</h2>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@{
+    var o = Model;
+}
+
+ <div class="container">
+@*  <h2>Table</h2>
+*@  <div class="table-responsive">          
+  <table class="table" id="tablepagination">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>BusNumber</th>
+        <th>BusName</th>
+        <th>Source</th>
+        <th>Destination </th>
+        <th>Date_Of_Transaction</th>
+        <th>Arrival</th>
+        <th>Departure</th>
+        <th>TypeOfBus</th>
+        <th>ModelNumber</th>
+        <th>NumberOfSeats </th>
+        <th>Fare</th>
+      </tr>
+    </thead>
+        @foreach(var m in o)
+        {
+    <tbody>
+        <tr>
+        <td>@m.Id </td>
+        <td>@m.BusNumber</td>
+        <td>@m.BusName</td>
+        <td>@m.Source</td>
+        <td>@m.Destination</td>
+        <td>@m.Date</td>
+        <td>@m.Arrival</td>
+        <td>@m.Departure</td>
+        <td>@m.TypeOfBus</td>
+        <td>@m.ModelNumber</td>
+        <td>@m.NumberOfSeats</td>
+        <td>@m.Fare</td>
+        </tr>
+        </tbody>
+}
+  </table>
+  </div>
+  </div>
+
+
+<div>
+    <a asp-action="fromto">From To Location</a>
+</div>

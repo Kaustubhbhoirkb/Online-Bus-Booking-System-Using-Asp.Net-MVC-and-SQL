@@ -1,0 +1,53 @@
+﻿@*@model rough.Models.Bus
+*@
+@model IEnumerable<rough.Models.Employee>   // ienumerable foreach loop
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h2>Display All Employees</h2>
+<div>
+    <a asp-action="Employeeindex" class="btn btn-primary">Back to List</a>
+</div>
+@{
+    var o = Model;
+}
+ <div class="container">
+  
+  <div class="table-responsive">          
+  <table class="table" id="tablepagination">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>EmployeeId</th>
+        <th>Password</th>
+        <th>EmpName</th>
+        <th>Age </th>
+        <th>Salary</th>
+        <th>Gender</th>
+       
+      </tr>
+    </thead>
+@foreach(var m in o)
+{
+    
+
+        <tbody>
+      <tr>
+        <td>@m.Id</td>
+        <td>@m.EmployeeId</td>
+        <td>@m.Password</td>
+        <td>@m.EmpName</td>
+        <td>@m.Age</td>
+        <td>@m.Salary</td>
+        <td>@m.Gender</td>
+      </tr>
+    </tbody>
+
+}
+
+
+        </table>
+        </div>
+        </div>

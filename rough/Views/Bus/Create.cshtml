@@ -1,0 +1,87 @@
+﻿@model rough.Models.Bus
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>ADD BUSES</h1>
+
+<hr />
+<div class="row">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+            <div class="col-md-2"></div>
+            <div class=" col-md-4">
+            <div class="form-group">
+                <label asp-for="BusNumber" class="control-label"><b>Bus Number</b></label>
+                <input asp-for="BusNumber" class="form-control" required/>
+                <span asp-validation-for="BusNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusName" class="control-label"><b>Bus Name</b></label>
+                    <input asp-for="BusName" class="form-control" required />
+                <span asp-validation-for="BusName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Source" class="control-label"><b>Source</b></label>
+                    <input asp-for="Source" class="form-control" required />
+                <span asp-validation-for="Source" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label"><b>Destination</b></label>
+                <input asp-for="Destination" class="form-control" />
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"><b>Date</b></label>
+                    <input asp-for="Date" class="form-control" placeholder="MM/DD/YYYY" required />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Arrival" class="control-label"><b>Arrival</b></label>
+                    <input asp-for="Arrival" class="form-control" required />
+                <span asp-validation-for="Arrival" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+          
+            <div class="form-group">
+                <label asp-for="Departure" class="control-label"><b>Departure</b></label>
+                    <input asp-for="Departure" class="form-control" required />
+                <span asp-validation-for="Departure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeOfBus" class="control-label"><b>Type Of Bus</b></label>
+                    <input asp-for="TypeOfBus" class="form-control" required />
+                <span asp-validation-for="TypeOfBus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelNumber" class="control-label"><b>Model Number</b></label>
+                    <input asp-for="ModelNumber" class="form-control" required />
+                <span asp-validation-for="ModelNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfSeats" class="control-label"><b>Number Of Seats</b></label>
+                    <input asp-for="NumberOfSeats" class="form-control" required />
+                <span asp-validation-for="NumberOfSeats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fare" class="control-label"><b>Fare</b></label>
+                    <input asp-for="Fare" class="form-control" required />
+                <span asp-validation-for="Fare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary btn-sm btn-block" style="margin-top: 23px; width: 100%;  height: 38px;" />
+            </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+            </div>
+        </form>
+</div>
+@ViewBag.a
+<div>
+    <a asp-action="Employeeindex1" class="btn btn-primary">Back to List</a>
+</div>
+

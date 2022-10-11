@@ -1,0 +1,156 @@
+﻿
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+@model IEnumerable<rough.Models.Bus>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .icon-city {
+    font-size: 23px;
+    padding-top: 4.3%;
+    padding-right: 2.4%;
+    padding-left: 2%;
+    color: gray;
+}
+</style>
+
+
+<h2>Search Bus</h2>
+<style>
+    form{
+       padding-left: 2%;
+       padding-right: 2%;
+       border: thin;
+       border-color: grey;
+       border-style: double;
+       border-radius: 7px;
+    }
+</style>
+
+
+<form asp-action="fromtonavbar" method="get" class="block">
+   
+    <p>
+        <div class="col-md-12">
+            <div class="row" >
+        <div class=" col-md-3">
+      <label for="SearchString" class="font-weight-bold"><b>Source</b></label>
+        <input  type="search" class="form-control" placeholder="Enter Source" value="@ViewData["key"]" name="SearchString" required/>        
+
+        </div>
+        <br />
+        <div class="col-md-3">
+        <label for="SearchString1"  class="font-weight-bold"><b>Destination</b></label>
+        <input type="search" class="form-control" placeholder="Enter Destination" value="@ViewData["key1"]" name="SearchString1" required />
+          
+
+        </div>
+        <div class="col-md-3">
+        <label for="SearchString2" class="font-weight-bold"><b>Date</b></label>
+        <input type="search" class="form-control" placeholder="Enter Date MM/DD/YYYY" value="@ViewData["key2"]" name="SearchString2" required />
+        </div>
+        <br />
+        <div class=" col-md-3">
+        <input id="btn" class="btn btn-outline-success" type="submit" value="search" style="margin-top:24px;"/>
+        </div>
+        </div>
+        </div>
+   
+    </p>
+</form>
+<br /><br />
+
+<div class="container">
+    <div class="table-responsive">
+<table id="tbl" class="table table-hover table-bordered" >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model=>model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.BusNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.BusName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Source)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Arrival)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Departure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.TypeOfBus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.ModelNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.NumberOfSeats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Fare)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arrival)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfBus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfSeats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fare)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+ 
