@@ -1,11 +1,3 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@*<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css"></script>
-*@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 @model IEnumerable<rough.Models.Bus>
@@ -102,7 +94,7 @@
 
 
 <form asp-action="fromto" method="get" class="block">
-   
+    
     <p>
         <div class="col-md-12">
             <div class="row" >
@@ -214,12 +206,21 @@
                 @Html.DisplayFor(modelItem => item.ModelNumber)
             </td>
             <td>
-                            @Html.DisplayFor(modelItem => item.NumberOfSeats)
-                        </td>
+                @Html.DisplayFor(modelItem => item.NumberOfSeats)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Fare)
             </td>
-                        <td><a asp-action="Seats" asp-route-Id="@item.Id">Book</a></td>
+                        <td>
+                             @if (item.NumberOfSeats == 0)
+                             {
+                                <a class='btn btn-danger btn-sm disabled' asp-action="Seats" asp-route-Id="@item.Id">Book</a>
+                             }
+                             else
+                             {
+                              <a class="btn btn-success" asp-action="Seats" asp-route-Id="@item.Id">Book</a>
+                             }
+                        </td>
                         <td>
            @* <td>
                             <input class="btn btn-sm btn-success" asp-route-id="@item.Id" type="button" value="Book" onclick="location.href='@Url.Action("Seats", "Bus")'" />
