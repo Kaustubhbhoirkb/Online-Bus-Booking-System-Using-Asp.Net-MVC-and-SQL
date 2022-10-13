@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using QuickMailer;
@@ -498,13 +498,13 @@ namespace rough.Controllers
                 cmd.Parameters.AddWithValue("@seats", y);
 
                 cmd.ExecuteNonQuery();
-                TempData["msg"] = "Ticket is Cancelled.!";
+                TempData["msg"] = "Ticket is Cancelled...!";
                 return View();
 
             }
             else
             {
-                TempData["msg"] = "Not available in database.!";
+                TempData["msg"] = "No Such Booking Found...!";
                 return View();
 
             }
@@ -543,11 +543,11 @@ namespace rough.Controllers
                     mgs = "Email has been send.";
                 }
                 ViewBag.Result = "data saved ";
-                ViewBag.Mgs = mgs;
+                TempData["msg"] = mgs;
             }
             else
             {
-                ViewBag.Result = "something wrong";
+                TempData["msg"] = "something wrong";
             }
 
             return View("Resdetails");
