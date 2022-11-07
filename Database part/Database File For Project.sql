@@ -1,3 +1,5 @@
+--Bus 
+We Have Created Bus_Table_By Code First Approach
 --Admin
 
 create table adminlogin(Admin_Id varchar (30),Password varchar(30))
