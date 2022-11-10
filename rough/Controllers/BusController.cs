@@ -522,13 +522,13 @@ namespace rough.Controllers
             umodel.BusID = Convert.ToInt32(HttpContext.Request.Form["txtbusid"]);
             umodel.Name = HttpContext.Request.Form["txtName"].ToString();
             umodel.Email = HttpContext.Request.Form["txtEmail"].ToString();
-            umodel.MailSub = HttpContext.Request.Form["txtPassword"].ToString();
             umodel.Age = Convert.ToInt32(HttpContext.Request.Form["txtAge"]);
             umodel.City = HttpContext.Request.Form["txtCity"].ToString();
-            umodel.Mailbody = HttpContext.Request.Form["txtGender"].ToString();
             umodel.Mobile_No = HttpContext.Request.Form["txtMobile_No"].ToString();
             umodel.ModeOP = HttpContext.Request.Form["txtmop"].ToString();
             umodel.Amount = Convert.ToInt32(HttpContext.Request.Form["txtamount"]);
+            umodel.MailSub = "Ticket Confirmed".ToString();
+            umodel.Mailbody = "Your Seat is Booked and Confirmed Thankyou For Booking Your Journey With Us".ToString();
 
             int result = umodel.SaveDetails();
             //if (result > 0)
